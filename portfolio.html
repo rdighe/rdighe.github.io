@@ -7,13 +7,14 @@
 <html>
 	<head>
 	<style type="text/css">
-        @media only screen and (min-width:600px) {
-            .hide-on-desktop, * [aria-labelledby='hide-on-desktop'] {
-                display: none;
-                max-height: 0;
-                overflow: hidden;
-            }
-        }
+        
+		#content-desktop {display: block;}
+		#content-mobile {display: none;}
+
+		@media screen and (max-width: 768px) {
+			#content-desktop {display: none;}
+			#content-mobile {display: block;}
+		}
     </style>
 		<title>Rohan Dighe</title>
 		<meta charset="utf-8" />
@@ -68,10 +69,10 @@
 								<h3>An Abridged Portfolio</h3>
 								<p>Below are a handful of my most impactful experiences and design projects from college. Right now, hovering over each image will give you an idea of what the project entailed and why it is important to me. Check back soon - there'll be pdf summaries of each project! Let me know if you have any questions - I'd love to talk more!</p>
 									
-								<div class="hide-on-desktop" aria-labelledby="hide-on-desktop" style="mso-hide: all;">
-									<span class="image fit"><a href="#"><img src='images/seniordesignhover.jpg'/></a></span>
+								<div id="content-mobile">
+									<span class="image fit"><a href="files/Senior Design - Rohan Contribution.pdf"><img src='images/seniordesignhover.jpg'/></a></span>
 											<!--<div class="col-4"><span class="image fit"><img src="images/seniordesign.jpg" alt="" /></span></div>-->
-											<span class="image fit"><a href="#"><img src='images/579projhover.jpg' ></a></span>
+											<span class="image fit"><a href="files/Collaborative Warehouse Optimization - Rohan Contribution.pdf"><img src='images/579projhover.jpg' ></a></span>
 											<span class="image fit"><a href="#"><img src='images/142controlshover.jpg'/></a></span>
 											<!-- Break -->
 											
@@ -84,7 +85,7 @@
 											<span class="image fit"><a href="https://www.youtube.com/watch?v=faWwuPDVMCo"><img src='images/scholarlyprojecthover.jpg'/></a></span>
 										
 								</div>
-									<div class="box alt">
+									<div id="content-desktop" class="box alt">
 										<div class="row gtr-50 gtr-uniform">
 											<div class="col-4"><span class="image fit"><a href="files/Senior Design - Rohan Contribution.pdf"><img src='images/seniordesign.jpg' onmouseover="this.src='images/seniordesignhover.jpg';" onmouseout="this.src='images/seniordesign.jpg';" /></a></span></div>
 											<!--<div class="col-4"><span class="image fit"><img src="images/seniordesign.jpg" alt="" /></span></div>-->
